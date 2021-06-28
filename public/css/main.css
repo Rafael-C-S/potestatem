@@ -1,0 +1,113 @@
+body{
+    background-color: #F1F2F3;
+    font-family: 'Roboto', serif;
+}
+
+#main div{
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+/*MENU*/
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 150px;
+    margin-right: 35px;
+}
+
+ul li {
+    position: relative;
+}
+
+li ul {
+    position: absolute;
+    left: 150px;
+    top: 0;
+    display: none;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+ul li a:hover{
+    text-decoration:underline;
+    font-weight: bold;
+    background: #ccc; 
+}
+
+#conteudo{
+    width: 80%;
+    padding: 0px 15px 15px 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #ccc;
+}
+
+/*ELEMENTOS DE PÁGINAS*/
+table{
+    width: 100%;
+}
+
+table th, td{
+    padding: 10px;
+}
+
+.btn-acoes{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.btn-novo{
+    background-color:#006400;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    color:#FFFFFF
+}
+
+.btn-novo:hover{
+    background-color:#2F4F4F;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    color:#FFFFFF
+}
+
+#form .row {
+    display: block;
+    margin: 10px 0 20px 0;
+}
+
+form input, textarea{
+    padding: 10px 25px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: "Roboto", serif;
+    width: 100%;
+}
+
+form input[type="file"]{
+    border:1px solid #ccc
+}
+
+#conteudo .title{
+    border-bottom: 1px solid #f1f2f3
+}
+
+
+/* @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  } */

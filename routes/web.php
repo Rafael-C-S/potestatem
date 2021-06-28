@@ -1,5 +1,10 @@
 <?php
 
+//Oganizando os controllers
+use App\Http\Controllers\{
+    CursoController
+};
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +21,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * Rotas para o recurso "curso"
+ */
+Route::get('/cursos', [CursoController::class, 'index'])->name('cursos.index');
+Route::get('/cursos/create', [CursoController::class, 'create'])->name('cursos.create');
+Route::post('/cursos', [CursoController::class, 'store'])->name('cursos.store');
