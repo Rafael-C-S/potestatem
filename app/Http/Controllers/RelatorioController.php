@@ -33,7 +33,7 @@ class RelatorioController extends Controller
             fputcsv($file, $columns);
             
             foreach($cursos as $curso) {
-                if(count($curso->alunos) >= 10)
+                if(count($curso->alunos) > 10)
                 {
                     fputcsv($file, array($curso->nome, count($curso->alunos)));
                 }
