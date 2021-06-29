@@ -1,5 +1,7 @@
 @extends('layouts.admin.admin')
 
+@section('title', 'CURSOS')
+
 @section('conteudo')
 <h1 class="title">CURSOS</h1>
 <div class="btn-acoes">
@@ -31,7 +33,13 @@
             <tr>
                 <td>{{$row->id}}</td>
                 <td>{{$row->nome}}</td>
-                <td>{{(!$row->imagem) ? '-' : $row->imagem}}</td>
+                <td><center>
+                    @if(!$row->imagem)
+                        -
+                    @else
+                        <img src="{{url("storage/{$row->imagem}")}}" alt="{{$row->nome}}" width="50">
+                    @endif                    
+                </center></td>
                 <td>{{$row->conteudo_programatico}}</td>
                 <td>
                     [<a href="{{route('cursos.show', $row->id)}}" class="">Visualizar</a>] |

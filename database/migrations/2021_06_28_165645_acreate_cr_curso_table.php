@@ -15,10 +15,10 @@ class AcreateCrCursoTable extends Migration
     {
         Schema::create('cr_curso', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 200);
+            $table->string('nome', 200)->unique();
             // $table->date('data_inicial');
             // $table->date('data_final');
-            $table->date('imagem')->nullable();
+            $table->string('imagem')->nullable();
             $table->text('conteudo_programatico');
             $table->softDeletes();
             $table->timestamps();

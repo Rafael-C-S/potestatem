@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class CursoRequest extends FormRequest
 {
@@ -23,10 +24,17 @@ class CursoRequest extends FormRequest
      */
     public function rules()
     {
+        $id = $this->segment(2);
         return [
-            'nome' => ['required', 'min:3', 'max:200'],
-            'conteudo_programatico' => ['required', 'min:5', 'max:5000']
-
+            'nome' => [
+                'required',
+                'min:3',
+                'max:200',
+                //"unique:cr_curso,nome,{$id},id",
+                Rule::unique('cr_curso')->ignore($id)
+            ],
+            'imagem' => ['nullable', 'image'],
+            'conteudo_programatico' => ['required', 'min:5', 'max:5000'],
         ];
     }
 }

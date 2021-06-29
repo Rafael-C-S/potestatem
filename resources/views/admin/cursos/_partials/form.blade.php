@@ -11,11 +11,10 @@
 
 <div class="form">
     @if(isset($row))
-        <form action="{{route('cursos.update', $row->id)}}" method="POST" id="form" class="form-cursos" files=true>
+        <form action="{{route('cursos.update', $row->id)}}" method="POST" id="form" class="form-cursos" enctype="multipart/form-data">
     @else
-        <form action="{{route('cursos.store')}}" method="POST" id="form" class="form-cursos" files=true>    
+        <form action="{{route('cursos.store')}}" method="POST" id="form" class="form-cursos" enctype="multipart/form-data">    
     @endif
-    <form action="{{route('cursos.store')}}" method="POST" id="form" class="form-cursos" files=true>
         @if(isset($row))
             @method('put')
         @endif
@@ -26,6 +25,12 @@
             </div>
         </div>
         <div class="row">
+            
+            @if (isset($row))
+                <b>Imagem anexada:</b><br><img src="{{url("storage/{$row->imagem}")}}" alt="{{$row->nome}}" width="50">
+            @else
+                <b>Imagem anexada:</b> Nenhuma imagem
+            @endif
             <input type="file" name="imagem" id="imagem">
         </div>
         <div class="row">
@@ -37,7 +42,8 @@
         
         @csrf
         <div class="actions">
-            <input type="submit" name="submit" value="{{isset($row) ? 'ATUALIZAR' : 'CADASTRAR'}}">
+            <input type="submit" name="submit" id="submit" value="{{isset($row) ? 'ATUALIZAR' : 'CADASTRAR'}}">
+            <a href="{{route('cursos.index')}}" class="btn-cancelar">CANCELAR</a>
         </div>
     </form>
 </div>
