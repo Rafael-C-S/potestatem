@@ -114,6 +114,11 @@ class CursoController extends Controller
     {
         //consulta o regitro
         $row = $this->cursos->find($id);
+        
+        if(count($row->alunos) > 0){
+            return back()
+                ->with('message', 'Este curso não pode ser excluído enquanto houver alunos matriculados.');
+        }
 
         //Caso não encontre o mesmo será redirecionado para o index
         if(!$row){

@@ -14,6 +14,13 @@
         </form>
         {{-- <a href="{{route('cursos.destroy', $row->id)}}" class="btn-excluir" >Excluir</a> --}}
     </div>
+    <div class="messages">
+        @if(session('message'))
+            <ul class="ul-messages">
+                <li>&rarr; {{session('message')}}</li>
+            </ul><br>
+        @endif
+    </div>
     <div id="content-show">
         <img src="{{url("storage/{$row->imagem}")}}" alt="{{$row->nome}}" width="80"><br><br>
         <b>Código do curso:</b> {{$row->id}}<br><br>

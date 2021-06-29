@@ -16,9 +16,9 @@
             <ul id="nav">
                 <li><a href="{{route('painel.index')}}">INÍCIO</a></li>
                 <li><a href="{{route('cursos.index')}}">CURSOS</a></li>
-                <li><a href="#">ALUNOS</a></li>
-                <li><a href="#">RELATÓRIOS</a></li>
-                <li><a href="#">SAIR</a></li>
+                <li><a href="{{route('alunos.index')}}">ALUNOS</a></li>
+                <li><a href="{{route('relatorios.index')}}">RELATÓRIOS</a></li>
+                <li><a href="/logout">SAIR</a></li>
             </ul>
         </div>
         <div id="conteudo">

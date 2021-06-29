@@ -14,9 +14,16 @@ class Curso extends Model
 
     protected $table = 'cr_curso';
 
+    protected $dates = ['deleted_at'];
+
     protected $fillable = [
         'nome',
         'imagem',
         'conteudo_programatico'
     ];
+
+    public function alunos()
+    {
+        return $this->belongsToMany(\App\Models\Aluno::class);
+    }
 }
