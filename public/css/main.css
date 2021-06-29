@@ -3,7 +3,7 @@ body{
     font-family: 'Roboto', serif;
 }
 
-#main div{
+#main .menu, #conteudo{
     display: inline-block;
     vertical-align: top;
     
@@ -63,7 +63,9 @@ table th, td{
 
 .btn-acoes{
     margin-top: 25px;
-    margin-bottom: 25px;
+margin-bottom: 50px;
+border-bottom: 1px solid #f1f2f3;
+padding: 22px 0px;
 }
 
 .btn-novo{
@@ -72,16 +74,62 @@ table th, td{
     text-decoration: none;
     font-weight: 900;
     text-transform: uppercase;
-    color:#FFFFFF
+    color:#FFFFFF;
+    border: 1px solid #006400;
 }
 
 .btn-novo:hover{
-    background-color:#2F4F4F;
+    background-color:#FFF;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
     font-weight: 900;
     text-transform: uppercase;
-    color:#FFFFFF
+    color:#006400;
+    border: 1px solid #006400;
+}
+
+.btn-excluir{
+    background-color:#FFF;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    color:#F00;
+    border: 1px solid #F00
+}
+
+.btn-excluir:hover{
+    background-color:#F00;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    color:#FFFFFF;
+    border: 1px solid #F00;
+}
+
+.btn-editar{
+    background-color:#7B68EE;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    color:#FFF;
+    border: 1px solid #7B68EE;
+}
+
+.btn-editar:hover{
+    background-color:#FFF;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    color:#7B68EE;
+    border: 1px solid #7B68EE;
+}
+
+button#btn-excluir{
+    padding: 12px 20px 11px 20px;
 }
 
 #form .row {
@@ -94,7 +142,7 @@ form input, textarea{
     margin-top: 5px;
     font-size: 18px;
     font-family: "Roboto", serif;
-    width: 100%;
+    width: 95%;
 }
 
 form input[type="file"]{
@@ -105,6 +153,30 @@ form input[type="file"]{
     border-bottom: 1px solid #f1f2f3
 }
 
+/*ERROS*/
+.errors .ul-errors{
+    width: 97%;
+    background-color: #FFDEAD;
+    padding: 15px;
+}
+
+.messages .ul-messages{
+    width: 97%;
+    background-color: #FFDEAD;
+    padding: 15px;
+}
+
+.errors .ul-errors li{
+    margin-bottom: 10px;
+}
+
+#paginacao .w-5{
+    display: none;
+}
+
+#search-form{
+    margin-bottom: 20px;
+}
 
 /* @media only screen and (max-width: 600px) {
     body {

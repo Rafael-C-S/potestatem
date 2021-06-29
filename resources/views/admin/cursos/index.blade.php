@@ -5,9 +5,21 @@
 <div class="btn-acoes">
     <a href="{{route('cursos.create')}}" class="btn-novo">Novo Curso</a>
 </div>
+{{-- <div id="search-form">
+    @include('admin.cursos._partials.form_search')
+</div> --}}
+<div class="messages">
+    @if(session('message'))
+        <ul class="ul-messages">
+            <li>&rarr; {{session('message')}}</li>
+        </ul><br>
+    @endif
+</div>
+
 <table border>
     <thead>
         <tr>
+            <th>CÓDIGO</th>
             <th>NOME</th>
             <th>IMAGEM</th>
             <th>CONTEÚDO<br> PROGRAMÁTICO</th>
@@ -17,10 +29,14 @@
     <tbody>
         @forelse ($rows as $row)
             <tr>
+                <td>{{$row->id}}</td>
                 <td>{{$row->nome}}</td>
                 <td>{{(!$row->imagem) ? '-' : $row->imagem}}</td>
                 <td>{{$row->conteudo_programatico}}</td>
-                <td>--</td>
+                <td>
+                    [<a href="{{route('cursos.show', $row->id)}}" class="">Visualizar</a>] |
+                    [<a href="{{route('cursos.edit', $row->id)}}" class="">Editar</a>]
+                </td>
             </tr>        
         @empty
             <tr>
@@ -29,4 +45,8 @@
         @endforelse
     </tbody>
 </table>
+<div id="paginacao">
+    {{-- Criando paginação básica --}}
+    {{$rows->links()}}
+</div>
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.admin.admin')
 
 @section('conteudo')
-    <h1 class="title">CURSOS - Novo</h1>
+    <h1 class="title">CURSOS - Editar</h1>
     
     @include('admin.cursos._partials.form')
 

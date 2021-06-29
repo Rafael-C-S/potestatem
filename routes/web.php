@@ -2,7 +2,8 @@
 
 //Oganizando os controllers
 use App\Http\Controllers\{
-    CursoController
+    CursoController,
+    PainelController
 };
 
 use Illuminate\Support\Facades\Route;
@@ -18,9 +19,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+/**
+ * Rotas para o recurso "painel"
+ */
+
+Route::get('/', [PainelController::class, 'index'])->name('painel.index');
 
 /**
  * Rotas para o recurso "curso"
@@ -28,3 +35,7 @@ Route::get('/', function () {
 Route::get('/cursos', [CursoController::class, 'index'])->name('cursos.index');
 Route::get('/cursos/create', [CursoController::class, 'create'])->name('cursos.create');
 Route::post('/cursos', [CursoController::class, 'store'])->name('cursos.store');
+Route::get('/cursos/{id}', [CursoController::class, 'show'])->name('cursos.show');
+Route::get('/cursos/edit/{id}', [CursoController::class, 'edit'])->name('cursos.edit');
+Route::put('/cursos/{id}', [CursoController::class, 'update'])->name('cursos.update');
+Route::delete('/cursos/destroy/{id}', [CursoController::class, 'destroy'])->name('cursos.destroy');
