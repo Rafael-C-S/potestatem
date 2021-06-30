@@ -13,6 +13,8 @@
 O arquivo .env.example dever ser utilizado como modelo para o arquivo de ambiente principal (.env)
 
 O banco de dados com registros de testes segue no diretório principal do projeto
+
+Optou-se por utilizar a versão 8.4 do Laravel
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
