@@ -22,7 +22,7 @@
         @endif
     </div>
     <div id="content-show">
-        <img src="{{url("storage/{$row->imagem}")}}" alt="{{$row->nome}}" width="80"><br><br>
+        <img src="{{url("storage/{$row->imagem}")}}" alt="{{$row->nome}}" width="300"><br><br>
         <b>Código do curso:</b> {{$row->id}}<br><br>
         <b>Nome do curso:</b> {{$row->nome}}<br><br>
         <b>Programa do Curso:</b><br>
