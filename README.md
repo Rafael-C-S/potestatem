@@ -12,7 +12,7 @@
 
 O arquivo .env.example dever ser utilizado como modelo para o arquivo de ambiente principal (.env)
 
-O banco de dados com registros de testes segue no diretório principal do projeto
+O banco de dados com registros de testes segue no diretório principal do projeto. Para utilizá-lo basta importá-lo.
 
 Optou-se por utilizar a versão 8.4 do Laravel
 
