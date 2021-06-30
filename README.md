@@ -15,6 +15,14 @@ O arquivo .env.example dever ser utilizado como modelo para o arquivo de ambient
 O banco de dados com registros de testes segue no diretório principal do projeto
 
 Optou-se por utilizar a versão 8.4 do Laravel
+
+Versões dos recursos do servidor local
+<ul>
+    <li>PHP: Version 7.3.27 </li>
+    <li>APACHE: Apache/2.4.35 (Win64) OpenSSL/1.1.1i PHP/7.3.27 (Port:80)</li>
+    <li>MySQL: mysql-5.7.24-winx64 started (Port:3306)</li>
+</ul>
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
