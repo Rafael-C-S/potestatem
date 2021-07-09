@@ -10,6 +10,8 @@
 
 ## INFORMAÇÕES ESSENCIAIS
 
+-> O sistema conta com um visual básico, uma vez que o foco é o recurso programacional 
+
 O arquivo .env.example dever ser utilizado como modelo para o arquivo de ambiente principal (.env)
 
 O banco de dados com registros de testes segue no diretório principal do projeto. Para utilizá-lo basta importá-lo.
